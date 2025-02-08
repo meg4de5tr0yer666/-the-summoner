@@ -128,6 +128,7 @@ projectileycmp   .rs 1  ; used in collision check to compare cat y to projectile
 projectilexcmp   .rs 1  ; used in collision check to compare cat x to projectile x
 catlowcollision  .rs 1  ; an offset value used to define the lowest point of cat hitbox
 animationspeed   .rs 1  ; stores animation speed for current location
+talkbeepdelay    .rs 1  ; defines how long to wait between talk beeping
 
 ;; DECLARE SOME CONSTANTS HERE
 
@@ -144,10 +145,8 @@ BOSSANIMATIONSPEED = $08
 CATBOSSPOSITIONOFFSET = $03
 PROJECTILESPPUADDRESS = $0298
 PROJECTILEDELAY = $06
-BOSSFIRSTPHASELENGTH = $10
-BOSSSECONDPHASELENGTH = $20
-; BOSSFIRSTPHASELENGTH = $02
-; BOSSSECONDPHASELENGTH = $02
+BOSSFIRSTPHASELENGTH = $08
+BOSSSECONDPHASELENGTH = $10
 BOSSTHIRDPHASELENGTH = $02
 BOSSENRAGEDPOSITION = $80
 BOSSDEFEATEDDELAY = $90
@@ -156,7 +155,6 @@ HYDRANTSDELAY = $03
 HYDRANTSMAX = $08
 HYDRANTSTIMEOUT = $50
 OBJECTSANIMATIONSPEED = $18
-XAHASCREENCHANCE = $05
 INITIALTEXTPPUADDR = $22E0
 ENDOFTEXT = $FE
 EMPTYBGTILEATTRIBUTE = $0F
